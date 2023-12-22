@@ -36,6 +36,7 @@ app.get("/api/works/:id", allowCors((req, res) => {
 
 app.post("/api/mail", allowCors(async (req, res) => {
   const { name, surname, email, area } = req.body;
+  console.log("Sending mail...");
   await sendMail({
     from: email,
     to: process.env.EMAIL_ADDRESS,
