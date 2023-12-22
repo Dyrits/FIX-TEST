@@ -6,9 +6,9 @@ const sendMail = require("./services/nodemailer");
 
 app.use(require('express').json())
 
-app.get("/api/works", allowCors((req, res) => {
+app.get("/api/works", (req, res) => {
   res.status(200).json({ works });
-}));
+});
 
 app.get("/api/works/:id", (req, res) => {
   const { id } = req.params;
