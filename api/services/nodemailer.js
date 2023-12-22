@@ -9,8 +9,15 @@ const transport = nodemailer.createTransport({
 });
 
 
-function sendMail(options) {
-  transport.sendMail(options);
+async function sendMail(options) {
+  await new Promise((resolve, reject) => {
+    transport.sendMail(options, (error, info) => {
+      if (error) {
+        reject(error);
+      }
+      resolve(info);
+    });
+  });
 }
 
 module.exports = sendMail;

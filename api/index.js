@@ -18,7 +18,6 @@ app.get("/api/works/:id", (req, res) => {
 
 app.post("/api/mail", async (req, res) => {
   const { name, surname, email, area } = req.body;
-  console.log(process.env.EMAIL_ADDRESS);
   await sendMail({
     from: email,
     to: process.env.EMAIL_ADDRESS,
