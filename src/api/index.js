@@ -1,5 +1,8 @@
-import axios from 'axios';
+import axios from "axios";
 
 export default axios.create({
-    baseURL: "/api"
+  baseURL: {
+    DEVELOPMENT: "http://localhost:3001/api",
+    PRODUCTION: "/api"
+  }[process.env.REACT_APP_ENV]
 });

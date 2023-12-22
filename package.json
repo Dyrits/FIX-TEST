@@ -5,11 +5,11 @@
   "author": "Ian Pelina",
   "licence": "ISC",
   "scripts": {
+    "api:dev": "nodemon api/api.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "api:dev": "nodemon api/api.js"
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
@@ -20,6 +20,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.2",
     "bootstrap": "^5.3.2",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "gsap": "^3.12.3",
     "jquery": "^3.7.1",
