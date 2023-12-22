@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-import api from '../../api';
+import api from '../../axios';
 
 import './Form.scss';
 
 export default function Form() {
-    
+
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
     const [email, setEmail] = useState('');

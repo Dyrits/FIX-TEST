@@ -14,7 +14,7 @@ import Collapse from '../../components/Collapse/Collapse';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 
-import api from '../../api';
+import api from '../../axios';
 import Cover from '../../components/Cover/Cover';
 
 export default function ProjectsDetails() {
@@ -34,7 +34,7 @@ export default function ProjectsDetails() {
   }, [id, navigate]);
 
   return detailsWork && (
-  
+
     <div className="background" style={{ backgroundImage: `url(${path})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
       <div>
         <header>
@@ -61,7 +61,7 @@ export default function ProjectsDetails() {
               <div className='acquired-container'>
                 {detailsWork.acquired.map((acquiredText, index) => <p key={index}>{acquiredText}<FontAwesomeIcon icon={faCircleCheck} style={{marginLeft: 10, width: 14, height: 14}}/></p>)}
               </div>
-            </div>  
+            </div>
           </div>
         </main>
       </div>

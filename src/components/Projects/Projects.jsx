@@ -4,7 +4,7 @@ import ProjectsCard from '../ProjectsCard/ProjectsCard';
 
 import React, { useEffect, useState } from 'react';
 
-import api from '../../api';
+import api from '../../axios';
 
 export default function Projects() {
 
