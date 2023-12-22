@@ -10,10 +10,7 @@ const transport = nodemailer.createTransport({
 
 
 function sendMail(options) {
-  console.log(process.env.MAIL_AUTH_USER);
-  console.log(process.env.MAIL_AUTH_PASSWORD);
   transport.sendMail(options);
-  console.log("Mail sent");
 }
 
 module.exports = sendMail;
