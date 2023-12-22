@@ -5,9 +5,7 @@ const works = require("./data/works");
 
 const sendMail = require("./services/nodemailer");
 
-app.use(cors({
-  origin: 'https://portfolio-8yd810tpv-ianpelinas-projects.vercel.app/'
-}));
+app.use(cors());
 
 app.use(require('express').json())
 
